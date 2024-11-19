@@ -1,0 +1,154 @@
+/* General reset and styling for the body */
+body {
+  width: 350px;
+  height: 250px;
+  margin: 0;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: var(
+    --bg-color,
+    #fff
+  ); /* Default to light mode background */
+  color: var(--text-color, #333); /* Default to light mode text color */
+  border: 2px solid var(--border-color, #e0e0e0);
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  display: flex;
+  font-family: "Poppins", sans-serif; /* Using Poppins for sleek look */
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: relative;
+  transition: background-color 0.6s, color 0.6s; /* Smooth transition between themes */
+  position: relative;
+}
+
+.logo_container {
+  border-radius: 5rem;
+  border: #555;
+}
+
+/* Minimalist styling for the h1 */
+h1 {
+  display: inline;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 300;
+  color: inherit; /* Inherit color from body */
+}
+
+/* Slider container */
+.slidecontainer {
+  width: 80%; /* Make the container smaller for centering */
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 120%; /* Full width of its container */
+  height: 8px;
+  background: var(--slider-bg, #e0e0e0); /* Default background */
+  border-radius: 50px;
+  transition: background 0.6s ease;
+}
+
+/* Mouse-over effect */
+.slider:hover {
+  background: var(--slider-hover-bg, #aaa);
+}
+
+/* The slider handle (thumb) */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--thumb-bg, #4caf50);
+  cursor: pointer;
+  transition: background-color 0.6s ease;
+}
+
+/* Slider handle for Firefox */
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--thumb-bg, #4caf50);
+  cursor: pointer;
+}
+
+/* Mouse-over effect for slider thumb */
+.slider::-webkit-slider-thumb:hover,
+.slider::-moz-range-thumb:hover {
+  background: var(--thumb-hover-bg, #45a049);
+}
+
+/* Styling for the value display */
+#sliderValue {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: inherit; /* Inherit color from body */
+  margin-top: 10px; /* Add some space between slider and value */
+}
+
+/* Dark Mode Button */
+#modeToggle {
+  background-color: transparent;
+  border: 2px solid var(--button-border, #333);
+  color: var(--button-text, #333);
+  padding: 4px 12px;
+  font-size: 1rem;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.6s;
+  position: absolute;
+  left: 20px;
+  bottom: 20px;
+}
+
+#modeToggle:hover {
+  background-color: var(--button-hover-bg, #333);
+  color: var(--button-hover-text, #fff);
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  --bg-color: #333; /* Dark background */
+  --text-color: #fff; /* Light text */
+  --border-color: #444; /* Darker border */
+  --slider-bg: #555; /* Dark slider background */
+  --slider-hover-bg: #888; /* Darker slider hover effect */
+  --thumb-bg: #00c1ff; /* Light-colored slider thumb */
+  --thumb-hover-bg: #008c99; /* Hover color for thumb */
+  --button-border: #fff; /* Added: Light border for button in dark mode */
+  --button-text: #fff; /* Added: Light text for button in dark mode */
+  --button-hover-bg: #fff; /* Added: Light background for button hover in dark mode */
+  --button-hover-text: #333;
+  --logo-color: invert(100%);
+}
+
+.logo_container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.logo_container h1 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.logo_container img {
+  border-radius: 1.5rem;
+  filter: var(--logo-color, invert(0%));
+  transition: 0.6s ease;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Volumify</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="logo_container">
+      <h1>Volumify</h1>
+      <img src="volume.png" width="30" height="30" alt="logo" />
+    </div>
+    <div class="descriptionContainer">
+      <p>
+        Play what you like. Use the slider below to control the volume of the
+        current YouTube tab.
+      </p>
+    </div>
+
+    <button id="modeToggle">Dark</button>
+
+    <div class="slidecontainer">
+      <input
+        type="range"
+        min="0"
+        max="200"
+        value="100"
+        class="slider"
+        id="myRange"
+      />
+      <span id="sliderValue">100</span>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
